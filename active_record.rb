@@ -21,6 +21,8 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 # Have the Student class inherit from ActiveRecord::Base
 class Student < ActiveRecord::Base
+  validates :name, presence: true
+  # validates :name:true 
 end
 
 binding.pry
